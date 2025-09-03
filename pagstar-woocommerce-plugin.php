@@ -3,7 +3,7 @@
  * Plugin Name: Pagstar
  * Plugin URI: https://pagstar.com.br
  * Description: Plugin de integração com a Pagstar para WordPress
- * Version: 1.0.8
+ * Version: 1.0.9
  * Author: Pagstar
  * Author URI: https://pagstar.com.br
  * License: GPLv2
@@ -181,14 +181,10 @@ function pagstar_handle_webhook(WP_REST_Request $request) {
         ], 400);
     }
 
-    if (!empty($response['pix'][0]['devolucoes'])) {
-        return new WP_REST_Response(['info' => 'Notificação de devolução'], 200);
-    }
-
 
     // Ajuste conforme os possíveis status da Pagstar
-    if ($response['status'] === 'CONCLUIDA') {
-        $order->update_status('processing');
+    if ($response['status'] === 'CONCLUIDA' && !isset($response['status']['pix'][0]['devolucoes'][0]['status'])) {
+        $order->update_status('pix');
     
         $order->update_meta_data('_pagstar_end2end', $response['pix'][0]['endToEndId']);
         $order->update_meta_data('_pagstar_txid', $response['txid']);
@@ -199,19 +195,16 @@ function pagstar_handle_webhook(WP_REST_Request $request) {
         $wpdb->update(
         $table_name,
         [
-            'status' => 'processing'
+            'status' => 'pix'
         ],
         [
             'transaction_id' => $txid
         ]
         );
 
-        return new WP_REST_Response(
-            [
-                'success' => 'Sucesso',
-            ],
-            200
-        );
+        return new WP_REST_Response([
+            'success' => 'Sucesso',
+        ], 200);
     }
 }
 

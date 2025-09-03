@@ -216,9 +216,6 @@ class WC_Pagstar_Gateway extends WC_Payment_Gateway
       )
     );
 
-    $order->update_meta_data('_pagstar_txid', $res['txid']);
-    $order->save();
-
     if (!$existing_record) {
       $data_to_save = array(
         'order_id' => $order_id,
@@ -324,7 +321,7 @@ class WC_Pagstar_Gateway extends WC_Payment_Gateway
                   window.location.href = '<?= get_option('pagstar_link_r'); ?>';
 
                   var order_id = '<?php echo $order_id; ?>'; // Substitua pelo ID real do pedido
-                  set_order_status(order_id, 'processing');
+                  set_order_status(order_id, 'pix');
                 } else {
                   setTimeout(function () {
                     checkTransactionStatus(transaction_id, refer);
@@ -430,7 +427,7 @@ class WC_Pagstar_Gateway extends WC_Payment_Gateway
         $status = isset($_GET['status']) ? sanitize_text_field($_GET['status']) : '';
 
         if ($status === '200') {
-          $order->update_status('processing', __('Pagamento concluído com sucesso.', 'text-domain'));
+          $order->update_status('pix', __('Pagamento concluído com sucesso.', 'text-domain'));
         } else {
           $order->update_status('failed', __('Falha no pagamento.', 'text-domain'));
         }
@@ -493,14 +490,14 @@ function change_order_status_callback()
       $wpdb->update(
         $table_name,
         [
-          'status' => 'Processing'
+          'status' => 'pix'
         ],
         [
           'order_id' => $order_id
         ]
       );
       
-      if ($status === 'processing') {
+      if ($status === 'pix') {
         wc_send_order_status_email($order_id, $status);
       }
     }
