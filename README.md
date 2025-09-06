@@ -1,6 +1,6 @@
 # Plugin Pagstar para WooCommerce
 
-![Versão](https://img.shields.io/badge/versão-1.0.4-blue.svg)
+![Versão](https://img.shields.io/badge/versão-1.0.9-blue.svg)
 ![WooCommerce](https://img.shields.io/badge/WooCommerce-5.0%2B-green.svg)
 ![WordPress](https://img.shields.io/badge/WordPress-5.0%2B-blue.svg)
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-purple.svg)
@@ -103,11 +103,9 @@ O plugin utiliza webhooks para:
 
 ## 📝 Changelog
 
-### Versão 1.0.4
-- Melhorias na segurança
-- Otimização de performance
-- Correção de bugs
+### Versão 1.0.9
 - Novas funcionalidades
+- Agora o pedido após o pagamento confirmado é colocado em um status personalizado
 
 [Ver changelog completo](CHANGELOG.md)
 
@@ -179,3 +177,4 @@ Para suporte técnico:
 ---
 
 Desenvolvido com ❤️ pela equipe Pagstar
+
