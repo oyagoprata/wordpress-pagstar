@@ -6,6 +6,11 @@
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-purple.svg)
 ![Licença](https://img.shields.io/badge/licença-GPLv2-orange.svg)
 
+## 🚨 AVISO
+
+Esta versão não é uma versão oficial do plugin Pagstar para WooCommece. Esta é uma versão modificada para atender um determinado negócio. Contribuições são bem vindas. O uso é livre conforme a licença de uso do plugin original.
+Esta versão foi previamente verificada e autorizada pela equipe de desenvolvedores da Pagstar citados respectivamente no rodapé deste README!
+
 ## 📋 Descrição
 
 O Plugin Pagstar para WooCommerce é uma solução completa de integração de pagamentos via PIX para sua loja WordPress. Desenvolvido com foco em segurança, performance e facilidade de uso, este plugin permite que seus clientes realizem pagamentos instantâneos através do sistema PIX.
@@ -186,3 +191,4 @@ Para suporte técnico:
 ---
 
 Desenvolvido com ❤️ pela equipe Pagstar e Editado pela equipe MXR Studio
+
