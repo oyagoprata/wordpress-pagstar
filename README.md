@@ -104,8 +104,10 @@ O plugin utiliza webhooks para:
 ## 📝 Changelog
 
 ### Versão 1.0.9
-- Novas funcionalidades
-- Agora o pedido após o pagamento confirmado é colocado em um status personalizado
+- Melhorias na segurança
+- Otimização de performance
+- Correção de bugs
+- Alteração no status do pedido após confirmação de pagamento
 
 [Ver changelog completo](CHANGELOG.md)
 
@@ -149,32 +151,38 @@ Para suporte técnico:
 ## 👥 Contribuidores
 
 <table>
-  <tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/kleberandrade">
+        <img src="https://github.com/kleberandrade.png" width="100px;" alt="Kleber Andrade"/>
+        <br />
+        <sub><b>Kleber Andrade</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/WillBorgesDev">
+        <img src="https://github.com/WillBorgesDev.png" width="100px;" alt="Wilker Borges"/>
+        <br />
+        <sub><b>Wilker Borges</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/pagstar">
+        <img src="https://github.com/pagstar.png" width="100px;" alt="Equipe Pagstar"/>
+        <br />
+        <sub><b>Equipe Pagstar</b></sub>
+      </a>
+    </td>
     <td align="center">
-      <a href="https://github.com/kleberandrade">
-        <img src="https://github.com/kleberandrade.png" width="100px;" alt="Kleber Andrade"/>
+      <a href="https://github.com/oyagoprata">
+        <img src="https://avatars.githubusercontent.com/u/9850399?s=400&u=b170807b311ceae005543a8c31eb4e3cdda7ada3&v=4" width="100px;" alt="Yago Prata"/>
         <br />
-        <sub><b>Kleber Andrade</b></sub>
+        <sub><b>Yago Prata</b></sub>
       </a>
     </td>
-    <td align="center">
-      <a href="https://github.com/WillBorgesDev">
-        <img src="https://github.com/WillBorgesDev.png" width="100px;" alt="Wilker Borges"/>
-        <br />
-        <sub><b>Wilker Borges</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/pagstar">
-        <img src="https://github.com/pagstar.png" width="100px;" alt="Equipe Pagstar"/>
-        <br />
-        <sub><b>Equipe Pagstar</b></sub>
-      </a>
-    </td>
-  </tr>
+  </tr>
 </table>
 
 ---
 
-Desenvolvido com ❤️ pela equipe Pagstar
-
+Desenvolvido com ❤️ pela equipe Pagstar e Editado pela equipe MXR Studio
