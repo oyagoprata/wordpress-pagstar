@@ -181,9 +181,12 @@ function pagstar_handle_webhook(WP_REST_Request $request) {
         ], 400);
     }
 
+    if (!empty($response['pix'][0]['devolucoes'])) {
+        return new WP_REST_Response(['info' => 'Notificação de devolução'], 200);
+    }
 
     // Ajuste conforme os possíveis status da Pagstar
-    if ($response['status'] === 'CONCLUIDA' && !isset($response['status']['pix'][0]['devolucoes'][0]['status'])) {
+    if ($response['status'] === 'CONCLUIDA') {
         $order->update_status('pix');
     
         $order->update_meta_data('_pagstar_end2end', $response['pix'][0]['endToEndId']);
